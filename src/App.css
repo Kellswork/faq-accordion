@@ -1,1 +1,64 @@
+.main-container{
+  background-color: var(--light-pink);
+  height: 100vh;
+  position: relative;
+}
 
+.main-container .container-background-image img{
+  width: 100%
+}
+
+.card-layout {
+  display: flex;
+  justify-content: center;
+}
+.card-container{
+  background-color: var(--white);
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  border-radius:var(--radius-large);
+
+  margin-top: -10%;
+}
+
+.card-container .header{
+  display: flex;
+  gap: var(--g-l);
+}
+.card-container .header h1 {
+  font-size: var(--font-display);
+  margin: 0;
+}
+
+.card-container .card-content{
+  margin-top: var(--m-lgx); 
+}
+
+.card-content-q-and-a .question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-content-q-and-a {
+  display: flex;
+  flex-direction: column;
+ gap: var(--m-l)
+}
+.card-content-q-and-a .question {
+  font-size: var(--font-title);
+}
+.card-content-q-and-a .answer{
+  font-size: var(--font-body);
+  line-height: var(--line-height-body);
+  color: var( --pale-purple);
+}
+
+.divider {
+height: 1;
+width: 100%;
+border-bottom: 1px solid var( --light-pink);
+margin-top: var(--m-l); 
+margin-bottom: var(--m-l); 
+
+}

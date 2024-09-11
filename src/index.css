@@ -15,6 +15,10 @@
   select {
     font: inherit;
   }
+  h1,h2,h3,h4,h5,h6,p{
+    margin:0;
+    padding:0;
+  }
 
   img,
   picture,
@@ -39,10 +43,38 @@
 
 :root {
   /* Font Size */
+  --font-display: 56px;
+  --font-title: 18px;
+  --font-body: 16px;
+  --line-height-body: 1.5;
+
+  /* Font-Family */
+  
 
   /* margin and padding */
+  --m-xs : 4px;
+  --m-sm: 8px;
+  --m-m: 12px;
+  --m-md: 16px;
+  --m-l: 24px;
+  --m-lg: 28px;
+  --m-lgx: 32px;
+
+  /* gap */
+  --g-xs : 4px;
+  --g-sm: 8px;
+  --g-m: 12px;
+  --g-md: 16px;
+  --g-l: 24px;
+  --g-lg: 28px;
+  --g-lgx: 32px;
+
 
   /* colours */
   --light-pink: #F8EEFF;
   --white: #FFF;
+  --pale-purple: #8B6990;
+
+  /* border radius */
+  --radius-large: 16px;
 }
