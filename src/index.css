@@ -7,6 +7,7 @@
 
   body {
     margin: unset;
+    background-color: var( --light-pink);
   }
 
   button,
@@ -15,9 +16,22 @@
   select {
     font: inherit;
   }
-  h1,h2,h3,h4,h5,h6,p{
-    margin:0;
-    padding:0;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
   }
 
   img,
@@ -41,18 +55,40 @@
   }
 }
 
+@font-face {
+  font-family: "WorkSansRegular";
+  src: url("./assets/fonts/static/WorkSans-Regular.ttf") format("truetype");
+  format-style: normal;
+  format-weight: 400;
+}
+
+@font-face {
+  font-family: "WorkSansBold";
+  src: url("./assets/fonts/static/WorkSans-Bold.ttf") format("truetype");
+  format-style: normal;
+  format-weight: 700;
+}
+
+@font-face {
+  font-family: "WorkSansSemiBold";
+  src: url("./assets/fonts/static/WorkSans-SemiBold.ttf") format("truetype");
+  format-style: normal;
+  format-weight: 600;
+}
+
 :root {
   /* Font Size */
   --font-display: 56px;
   --font-title: 18px;
   --font-body: 16px;
+  --font-body-mobile: 14px;
+  --font-display-mobile: 32px;
   --line-height-body: 1.5;
 
   /* Font-Family */
-  
 
   /* margin and padding */
-  --m-xs : 4px;
+  --m-xs: 4px;
   --m-sm: 8px;
   --m-m: 12px;
   --m-md: 16px;
@@ -61,7 +97,7 @@
   --m-lgx: 32px;
 
   /* gap */
-  --g-xs : 4px;
+  --g-xs: 4px;
   --g-sm: 8px;
   --g-m: 12px;
   --g-md: 16px;
@@ -69,10 +105,11 @@
   --g-lg: 28px;
   --g-lgx: 32px;
 
-
   /* colours */
-  --light-pink: #F8EEFF;
-  --white: #FFF;
+  --light-pink: #f8eeff;
+  --white: #fff;
+  --pale-purple: #8b6990;
+  --pink: #AD28EB;
   --pale-purple: #8B6990;
 
   /* border radius */
