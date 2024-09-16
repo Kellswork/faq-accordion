@@ -27,7 +27,6 @@ Users should be able to:
 
 ![faq-accordion](src/assets/images/faq-accordion.jpg)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
 ### Links
 
@@ -46,6 +45,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Continued development
 
-Semantic HTML
-Accessibility
-Mobile First design
+- Semantic HTML
+- Accessibility
+- Mobile First design
