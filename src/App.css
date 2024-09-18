@@ -56,7 +56,7 @@
 .card-content-q-and-a .quest-text:focus {
   color: var(--pink);
 }
- // manage keyboard focus
+
  button:focus-visible {
   outline: 2px solid var(--pink);
   outline-offset: 3px;
