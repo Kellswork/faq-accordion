@@ -72,7 +72,7 @@
   cursor: pointer;
 }
 
-.card-content-q-and-a .answer {
+.card-content-q-and-a .faq_answer {
   font-size: var(--font-body);
   line-height: var(--line-height-body);
   color: var(--pale-purple);
@@ -116,7 +116,7 @@
     text-align: left;
   }
 
-  .card-content-q-and-a .answer {
+  .card-content-q-and-a .faq_answer {
     font-size: var(--font-body-mobile);
   }
 

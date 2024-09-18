@@ -32,6 +32,8 @@ function App() {
               <>
                 <li key={data.question} className="card-content-q-and-a">
                   <button
+                    aria-expanded="false"
+                    aria-controls="content"
                     className="question"
                     onClick={() => {
                       handleShowAnsweer(index);
@@ -40,19 +42,28 @@ function App() {
                     <h2 className="quest-text">{data.question}</h2>
 
                     {showIndex === index && show === true ? (
-                      <img className="minus-icon" src={iconMinus} alt="" />
+                      <img
+                        className="question__icon--minus"
+                        src={iconMinus}
+                        alt=""
+                      />
                     ) : (
-                      <img src={iconPlus} alt="" />
+                      <img
+                        className="question__icon--plus"
+                        src={iconPlus}
+                        alt=""
+                      />
                     )}
                   </button>
                   <div
+                    id="content"
                     className={
                       showIndex === index && show === true
-                        ? "showAnswer answer"
-                        : "answer"
+                        ? "showAnswer faq_answer"
+                        : "faq_answer"
                     }
                   >
-                    {data.answer}
+                    <p>{data.answer}</p>
                   </div>
                 </li>
                 <div className="divider"></div>
