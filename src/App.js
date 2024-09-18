@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import backgroundImage from "./assets/images/background-pattern-desktop.svg";
 import iconPlus from "./assets/images/icon-plus.svg";
 import iconMinus from "./assets/images/icon-minus.svg";
@@ -9,11 +9,14 @@ import Data from "./Data";
 function App() {
   const [showIndex, setShowIndex] = useState(null);
   const [show, setShow] = useState(false);
+
   const handleShowAnsweer = (index) => {
-    if (showIndex === index && show === true) {
+    if (showIndex === index && show) {
       setShow(false);
-    } else setShow(!show);
-    setShowIndex(index);
+    } else {
+      setShow(!show);
+      setShowIndex(index);
+    }
   };
 
   return (
@@ -29,45 +32,47 @@ function App() {
           </div>
           <ul className="card-content">
             {Data.map((data, index) => (
-              <>
-                <li key={data.question} className="card-content-q-and-a">
-                  <button
-                    aria-expanded="false"
-                    aria-controls="content"
-                    className="question"
-                    onClick={() => {
-                      handleShowAnsweer(index);
-                    }}
-                  >
-                    <h2 className="quest-text">{data.question}</h2>
+              <Fragment key={data.question}>
+                <li className="card-content-q-and-a">
+                  <h2 className="quest-text">
+                    <button
+                      aria-expanded={
+                        showIndex === index && show ? "true" : "false"
+                      }
+                      aria-controls={`content-${index}`}
+                      className="question"
+                      onClick={() => {
+                        handleShowAnsweer(index);
+                      }}
+                    >
+                      {data.question}
 
-                    {showIndex === index && show === true ? (
-                      <img
-                        className="question__icon--minus"
-                        src={iconMinus}
-                        alt=""
-                      />
-                    ) : (
-                      <img
-                        className="question__icon--plus"
-                        src={iconPlus}
-                        alt=""
-                      />
-                    )}
-                  </button>
+                      {showIndex === index && show === true ? (
+                        <img
+                          className="question__icon--minus"
+                          src={iconMinus}
+                          alt="Collapse"
+                        />
+                      ) : (
+                        <img
+                          className="question__icon--plus"
+                          src={iconPlus}
+                          alt="Expand"
+                        />
+                      )}
+                    </button>
+                  </h2>
                   <div
-                    id="content"
-                    className={
-                      showIndex === index && show === true
-                        ? "showAnswer faq_answer"
-                        : "faq_answer"
-                    }
+                    id={`content-${index}`}
+                    className={`faq_answer ${
+                      showIndex === index && show ? "showAnswer" : ""
+                    }`}
                   >
                     <p>{data.answer}</p>
                   </div>
                 </li>
-                <div className="divider"></div>
-              </>
+                <hr className="divider" />
+              </Fragment>
             ))}
           </ul>
         </div>

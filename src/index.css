@@ -88,12 +88,13 @@
 
 :root {
   /* Font Size */
-  --font-display: 56px;
-  --font-title: 18px;
-  --font-body: 16px;
-  --font-body-mobile: 14px;
-  --font-display-mobile: 32px;
+  --font-display: 3.5rem;       /* 56px / 16 = 3.5rem */
+  --font-title: 1.125rem;       /* 18px / 16 = 1.125rem */
+  --font-body: 1rem;            /* 16px / 16 = 1rem */
+  --font-body-mobile: 0.875rem; /* 14px / 16 = 0.875rem */
+  --font-display-mobile: 2rem;  /* 32px / 16 = 2rem */
   --line-height-body: 1.5;
+  
 
   /* Font-Family */
 

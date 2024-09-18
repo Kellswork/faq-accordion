@@ -50,27 +50,34 @@
   gap: 24px;
 }
 
-.question .quest-text {
-  text-align: left;
-  cursor: pointer;
-}
-.card-content-q-and-a .question .quest-text:hover {
+.card-content-q-and-a .quest-text:hover {
   color: var(--pink);
 }
-.card-content-q-and-a .question .quest-text:focus {
+.card-content-q-and-a .quest-text:focus {
   color: var(--pink);
+}
+ // manage keyboard focus
+ button:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
 }
 
-.question .quest-text{
+.card-content-q-and-a .quest-text {
   font-family: "WorkSansSemiBold", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: var(--font-title);
 }
+.question {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
 .question .icon-btn {
   flex-shrink: 0;
   cursor: pointer;
 }
+
 
 .card-content-q-and-a .faq_answer {
   font-size: var(--font-body);
@@ -83,11 +90,11 @@
 }
 
 .divider {
-  height: 1;
   width: 100%;
   border-bottom: 1px solid var(--light-pink);
   margin-top: var(--m-l);
   margin-bottom: var(--m-l);
+  opacity: 0.2;
 }
 .divider:last-child {
   display: none;
