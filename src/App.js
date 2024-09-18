@@ -8,56 +8,57 @@ import Data from "./Data";
 
 function App() {
   const [showIndex, setShowIndex] = useState(null);
-  const [show, setShow] = useState(false)
-  ;
+  const [show, setShow] = useState(false);
   const handleShowAnsweer = (index) => {
-    if((showIndex === index) && (show === true)){
-      setShow(false)
-    } else setShow(!show)
+    if (showIndex === index && show === true) {
+      setShow(false);
+    } else setShow(!show);
     setShowIndex(index);
   };
 
   return (
     <div className="main-container">
       <div className="container-background-image">
-        <img src={backgroundImage} alt="Background" />
+        <img src={backgroundImage} alt="" />
       </div>
       <div className="card-layout">
         <div className="card-container">
           <div className="header">
-            <img src={iconStar} alt="icon star" />
+            <img src={iconStar} alt="" />
             <h1>FAQs</h1>
           </div>
-          <div className="card-content">
+          <ul className="card-content">
             {Data.map((data, index) => (
               <>
-                <div key={data.question} className="card-content-q-and-a">
-                  <div className="question">
-                    <button className="quest-btn" onClick={()=>{handleShowAnsweer(index)}}><h3>{data.question}</h3></button>
-                    <button className="icon-btn"
-                      onClick={() => {
-                        handleShowAnsweer(index);
-                      }}
-                    >
-                      {(showIndex === index && show===true) ? (
-                        <img className="minus-icon" src={iconMinus} alt="minus icon"  />
-                      ) : (
-                        <img src={iconPlus} alt="plus icon" />
-                      )}
-                    </button>
-                  </div>
+                <li key={data.question} className="card-content-q-and-a">
+                  <button
+                    className="question"
+                    onClick={() => {
+                      handleShowAnsweer(index);
+                    }}
+                  >
+                    <h2 className="quest-text">{data.question}</h2>
+
+                    {showIndex === index && show === true ? (
+                      <img className="minus-icon" src={iconMinus} alt="" />
+                    ) : (
+                      <img src={iconPlus} alt="" />
+                    )}
+                  </button>
                   <div
                     className={
-                     ( showIndex === index && show===true )? "showAnswer answer" : "answer"
+                      showIndex === index && show === true
+                        ? "showAnswer answer"
+                        : "answer"
                     }
                   >
                     {data.answer}
                   </div>
-                </div>
+                </li>
                 <div className="divider"></div>
               </>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </div>

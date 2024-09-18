@@ -7,7 +7,7 @@
 
   body {
     margin: unset;
-    background-color: var( --light-pink);
+    background-color: var(--light-pink);
   }
 
   button,
@@ -41,6 +41,16 @@
     display: block;
     max-inline-size: 100%;
     block-size: auto;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul,ol {
+    padding: 0;
+    margin:0;
+  }
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -109,8 +119,8 @@
   --light-pink: #f8eeff;
   --white: #fff;
   --pale-purple: #8b6990;
-  --pink: #AD28EB;
-  --pale-purple: #8B6990;
+  --pink: #ad28eb;
+  --pale-purple: #8b6990;
 
   /* border radius */
   --radius-large: 16px;

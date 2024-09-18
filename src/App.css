@@ -50,18 +50,18 @@
   gap: 24px;
 }
 
-.question h3 {
+.question .quest-text {
   text-align: left;
   cursor: pointer;
 }
-.card-content-q-and-a .question h3:hover {
+.card-content-q-and-a .question .quest-text:hover {
   color: var(--pink);
 }
-.card-content-q-and-a .question h3:focus {
+.card-content-q-and-a .question .quest-text:focus {
   color: var(--pink);
 }
 
-.question h3 {
+.question .quest-text{
   font-family: "WorkSansSemiBold", sans-serif;
   font-style: normal;
   font-weight: 600;
